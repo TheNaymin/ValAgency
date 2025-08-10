@@ -1,0 +1,54 @@
+/* Import Tailwind base styles */
+@import 'tailwindcss/base';
+/* Import Tailwind components */
+@import 'tailwindcss/components';
+
+/* Import Tailwind utilities */
+@import 'tailwindcss/utilities';
+
+:root {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  body {
+    @apply overflow-x-hidden;
+  }
+}
+
+@layer components {
+  .section {
+    @apply min-h-screen w-full py-16 px-4 sm:px-6 lg:px-8;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .nav-link {
+    @apply text-dark hover:text-primary transition-colors duration-300;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary/90 transition-all duration-300;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-white px-6 py-3 rounded-lg hover:bg-secondary/90 transition-all duration-300;
+  }
+
+  .service-card {
+    @apply bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300;
+  }
+}
+
+.section-animation {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.section-animation.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
